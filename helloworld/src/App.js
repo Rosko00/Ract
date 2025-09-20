@@ -4,7 +4,6 @@ function App() {
   return (
     <div className="App">
       <HelloWorld text="Ahoj" />
-      <HelloWorld text="Buenos días" />
     </div>
   );
 }

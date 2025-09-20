@@ -1,16 +1,30 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Counter({ start }) {
   const [count, setCount] = useState(parseInt(start));
+  const intervalRef = useRef(null);
 
-  const handleClick = () => {
-    setCount(count + 1);
+  const startIncrement = () => {
+    intervalRef.current = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 50);
+  };
+
+  const stopIncrement = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = null;
   };
 
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={handleClick}>Pridaj počet</button>
+      <button
+        onMouseDown={startIncrement}
+        onMouseUp={stopIncrement}
+        onMouseLeave={stopIncrement}
+      >
+        Enter 
+      </button>
     </div>
   );
 }

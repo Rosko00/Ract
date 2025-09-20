@@ -1,4 +1,5 @@
-function HelloWorld() {
-return <h1>Hello world!</h1>
+function HelloWorld(props) {
+    const text = props.text;
+    return <h1>{text}!</h1>;
 }
 export default HelloWorld;

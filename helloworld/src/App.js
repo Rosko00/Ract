@@ -3,7 +3,8 @@ import HelloWorld from "./HelloWorld.js";
 function App() {
   return (
     <div className="App">
-      <HelloWorld />
+      <HelloWorld text="Ahoj" />
+      <HelloWorld text="Buenos días" />
     </div>
   );
 }

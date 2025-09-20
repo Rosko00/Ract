@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import People from "./components/People"; // 👉 nezabudni importovať
+import Person from "./components/Person";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/people" element={<People />} />
+          <Route path="/people/:id" element={<Person />} />
         </Routes>
       </div>
     </Router>

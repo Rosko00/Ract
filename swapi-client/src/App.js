@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import People from "./components/People"; // 👉 nezabudni importovať
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             </div>
           </div>
         </nav>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/people" element={<People />} />

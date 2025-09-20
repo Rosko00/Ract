@@ -13,5 +13,4 @@ function NumberInput({ name, label, value, onChange }) {
     </label>
   );
 }
-
 export default NumberInput;
